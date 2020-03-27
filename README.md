@@ -1,18 +1,21 @@
 # _Pierre's Sweet & Savory Treats_
 
-#### _Business app for tracking _, _March 27, 2020_
+#### _Business app for tracking relationship between treats and their flavors_, _March 27, 2020_
 
 #### By _**Joseph Wangemann**_
 
 ## Description
 
-This project creates an application for tracking  . 
+This project creates an application for tracking a many-to-many relationship between treats and flavors, using authenication for adding/editing/deleting. 
 
 ## Project Specifications
 
 | Behavior | Input | Output |
 |---|:---:|:---:|
-| Allow user to create  | Example: Click add  | Output: Name of  |
+| Allow user to view index pages without being logged in | Example: Click "All Treats"  | Output: See index list of treats  |
+| Allow user to register | Example: Click "Register" and fill out form  | Output: See account page with option to log out  |
+| Allow user to add, edit or delete treats and flavors | Example: Click "Add a treat"  | Output: See form to input new treat  |
+| Prevent non-registered user from adding/editing/deleting | Example: Click "Delete flavor" without being logged in  | Output: See login/register form  |
 
 
 
@@ -62,7 +65,7 @@ dotnet run
 http://localhost:5000/
 ```
 
-* If your setup worked you should see a welcome page with a rainbow background. 
+* If your setup worked you will see a welcome page with a rainbow background. 
 
 **Note: To exit, simply press**
 ```sh
@@ -71,7 +74,7 @@ Ctrl + C
 
 ## Known Bugs
 
-_Updating a client currently deletes the client._
+_No known bugs._
 
 ## Support and contact details
 
