@@ -62,13 +62,15 @@ i {
 }
 
 .mdl-layout__drawer {
-  background-color: rgb(7, 121, 121);
+  background-image: radial-gradient(rgb(1, 122, 122), indigo);
   color: ivory;
+  font-size: 140%;
   border-radius: 15px;
-  border: 5px solid black;
+  border: 10px solid ivory;
 }
 
 .link {
   color: ivory;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
