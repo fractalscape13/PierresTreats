@@ -11,7 +11,7 @@ namespace PierresTreats.Models
   {
     public Treat()
     {
-      this.Categories = new HashSet<FlavorTreat>();
+      this.Flavors = new HashSet<FlavorTreat>();
     }
     public int TreatId { get; set; }
     public string Description { get; set; }
