@@ -104,6 +104,8 @@ namespace PierresTreats.Controllers
       var thisTreat = _db.Treats.FirstOrDefault(treats => treats.TreatId == id);
       return View(thisTreat);
     }
+
+    [Authorize]
     [HttpPost]
     public ActionResult DeleteFlavor(int joinId)
     {
