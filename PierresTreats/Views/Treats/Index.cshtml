@@ -13,10 +13,6 @@
     @foreach (Treat treat in Model)
     {
       <h3>@Html.ActionLink($"{treat.Description}", "Details", new {id = treat.TreatId})</h3>
-      @* @foreach (FlavorTreat flavor in treat.Flavors)
-      {
-        <p><em>@Html.ActionLink($"{flavor.Flavor.Name}", "Details", "Flavors", new {id = flavor.FlavorId})</em></p>
-      } *@
     }
   }
   else
