@@ -1,3 +1,27 @@
-  @{
+@{
   Layout = "_Layout";
 }
+
+@model PierresTreats.Models.Flavor;
+
+<h2>Flavor Details </h2>
+<hr/>
+<h3>@Html.DisplayNameFor(model => model.Name):  @Html.DisplayFor(model => model.Name)</h3>
+<div class="box">
+  @if(@Model.Books.Count == 0)
+  {
+    <p>Unfortunately, there are no treats in this flavor category.</p>
+  }
+  else
+  {
+    <h4>Treats in this flavor category: </h4>
+    
+    @foreach(var join in Model.Treats)
+    {
+      <h3>@Html.ActionLink($"{join.Treat.Description}", "Details", "Treats", new {id = join.Treat.TreatId})</h3>
+    }
+  }
+</div>
+
+<p>@Html.ActionLink("Edit this flavor", "Edit", new { id = Model.FlavorId })</p>
+<p>@Html.ActionLink("Delete this flavor", "Delete", new { id = Model.FlavorId })</p>
