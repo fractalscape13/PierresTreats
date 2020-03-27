@@ -31,7 +31,7 @@ namespace PierresTreats.Controllers
     [Authorize]
     public ActionResult Create()
     {
-      ViewBag.CategoryId = new SelectList(_db.Flavors, "FlavorId", "Name");
+      ViewBag.FlavorId = new SelectList(_db.Flavors, "FlavorId", "Name");
       return View();
     }
 
