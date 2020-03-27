@@ -18,7 +18,7 @@
     
     @foreach(var join in Model.Treats)
     {
-      <h3>@Html.ActionLink($"{join.Treat.Description}", "Details", "Treats", new {id = join.Treat.TreatId})</h3>
+      <h3>@Html.ActionLink($"{join.Treat.TreatName}", "Details", "Treats", new {id = join.Treat.TreatId})</h3>
     }
   }
 </div>
