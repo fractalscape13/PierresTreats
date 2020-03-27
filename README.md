@@ -91,7 +91,7 @@ If you have any comments or questions, please submit a pull request on my reposi
 * [MySQL Workbench 8.0.15](https://downloads.mysql.com/archives/workbench/)
 * [Entity Core framework](https://docs.microsoft.com/en-us/ef/)
 * [LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)
-* [Identity]
+* [Identity](https://docs.microsoft.com/en-us/azure/active-directory/develop/)
 
 ### License
 
