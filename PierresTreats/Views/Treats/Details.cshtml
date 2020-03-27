@@ -14,7 +14,7 @@
   }
   else
   {
-    <h4>Flavors of this treat:</h4>
+    <h4>Flavor profiles of this treat:</h4>
       @foreach(var join in Model.Flavors)
       {
         <h3>@Html.ActionLink($"{join.Flavor.Name}", "Details", "Flavors", new {id = join.Flavor.FlavorId})</h3>
@@ -27,7 +27,7 @@
   }
 </div>
 
+<p>@Html.ActionLink("Add a flavor category", "AddFlavor", new { id = Model.TreatId })</p>
 <p>@Html.ActionLink("Edit this treat", "Edit", new { id = Model.TreatId })</p>
 <p>@Html.ActionLink("Delete this treat", "Delete", new { id = Model.TreatId })</p>
-<p>@Html.ActionLink("Add a flavor category", "AddFlavor", new { id = Model.TreatId })</p>
 <p>@Html.ActionLink("Back to treat list", "Index")</p>

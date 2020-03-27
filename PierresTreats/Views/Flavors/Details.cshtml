@@ -6,8 +6,8 @@
 
 <h2>Flavor Details </h2>
 <hr/>
-<h3>@Html.DisplayNameFor(model => model.Name):  @Html.DisplayFor(model => model.Name)</h3>
 <div class="box">
+  <h2>@Html.DisplayFor(model => model.Name)</h2>
   @if(@Model.Treats.Count == 0)
   {
     <p>Unfortunately, there are no treats in this flavor category.</p>
