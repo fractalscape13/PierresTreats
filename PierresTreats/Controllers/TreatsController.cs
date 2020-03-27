@@ -95,7 +95,7 @@ namespace PierresTreats.Controllers
         _db.FlavorTreat.Add(new FlavorTreat() { FlavorId = FlavorId, TreatId = treat.TreatId });
       }
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new { id = treat.TreatId});
     }
 
     [Authorize]
@@ -110,7 +110,7 @@ namespace PierresTreats.Controllers
       var joinEntry = _db.FlavorTreat.FirstOrDefault(entry => entry.FlavorTreatId == joinId);
       _db.FlavorTreat.Remove(joinEntry);
       _db.SaveChanges();
-      return RedirectToAction("Index");
+      return RedirectToAction("Details", new { id = joinEntry.TreatId});
     }
 
     [HttpPost, ActionName("Delete")]
