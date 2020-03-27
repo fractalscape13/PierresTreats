@@ -40,6 +40,7 @@ input {
 select {
   background-color: black;
   margin: 15px;
+  color: ivory;
 }
 
 .box {
@@ -73,4 +74,18 @@ i {
   color: ivory;
   margin-top: 25px;
   margin-bottom: 50px;
+}
+
+.title {
+  font-size: 75%;
+}
+
+.confirm {
+  background-image: radial-gradient(rgb(1, 122, 122), indigo);
+  width: 25%;
+}
+
+.confirm:hover {
+  cursor: pointer;
+  opacity: .6;
 }
