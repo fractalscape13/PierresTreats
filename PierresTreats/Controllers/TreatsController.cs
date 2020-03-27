@@ -26,7 +26,7 @@ namespace PierresTreats.Controllers
     {
       var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
       var currentUser = await _userManager.FindByIdAsync(userId);
-      var userTreats = _db.Items.Where(entry => entry.User.Id == currentUser.Id);
+      var userTreats = _db.Treats.Where(entry => entry.User.Id == currentUser.Id);
       return View(userTreats);
     }
 
@@ -42,7 +42,7 @@ namespace PierresTreats.Controllers
     {
      var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
      var currentUser = await _userManager.FindByIdAsync(userId);
-     item.User = currentUser;
+     treat.User = currentUser;
       _db.Treats.Add(treat);
       if (FlavorId != 0)
       {
@@ -55,8 +55,8 @@ namespace PierresTreats.Controllers
     public ActionResult Details(int id)
     {
       var thisTreat = _db.Treats
-        .Include(treat => treat.Categories)
-        .ThenInclude(join => join.Category)
+        .Include(treat => treat.Flavors)
+        .ThenInclude(join => join.Flavor)
         .FirstOrDefault(treat => treat.TreatId == id);
       return View(thisTreat);
     }
